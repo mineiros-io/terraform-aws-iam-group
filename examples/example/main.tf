@@ -1,5 +1,6 @@
 # ------------------------------------------------------------------------------
-# Example full usage of the terraform-aws-iam-group module
+# Example Usage: Create an IAM group called users
+# (set all optional variables to their explicit defaults)
 # ------------------------------------------------------------------------------
 
 module "terraform-aws-iam-group" {
@@ -7,11 +8,20 @@ module "terraform-aws-iam-group" {
 
   # All required module arguments
 
-  # none
+  name = "users"
 
   # All optional module arguments set to the default values
 
-  # none
+  path = "/"
+
+  # create an inline policy
+  policy_statements  = []
+  policy_name        = null
+  policy_name_prefix = null
+
+  # add custom or managed polcies by ARN
+
+  policy_arns = []
 
   # All optional module configuration arguments set to the default values.
   # Those are maintained for terraform 0.12 but can still be used in terraform 0.13
@@ -22,11 +32,17 @@ module "terraform-aws-iam-group" {
 }
 
 # ------------------------------------------------------------------------------
-# Example AWS provider setup
+# Provider Setup
 # ------------------------------------------------------------------------------
-
 provider "aws" {
   version = "~> 2.0"
+  region  = var.region
+}
+
+variable "region" {
+  type        = string
+  description = "The AWS region to run in. Default is 'eu-west-1'"
+  default     = "eu-west-1"
 }
 
 # ------------------------------------------------------------------------------
