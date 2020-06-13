@@ -6,7 +6,7 @@
 [![Terraform Version][badge-terraform]][releases-terraform]
 [![Join Slack][badge-slack]][slack]
 
-# terraform-module-template
+# terraform-aws-iam-group
 
 A [Terraform] base module for [Amazon Web Services (AWS)][AWS].
 
@@ -61,16 +61,16 @@ These are some of our custom features:
 Most basic usage just setting required arguments:
 
 ```hcl
-module "terraform-module-template" {
-  source = "git@github.com:mineiros-io/terraform-module-template.git?ref=v0.0.1"
+module "terraform-aws-iam-group" {
+  source = "git@github.com:mineiros-io/terraform-aws-iam-group.git?ref=v0.0.1"
 }
 ```
 
 Advanced usage as found in [examples/example/main.tf] setting all required and optional arguments to their default values.
 
 ```hcl
-module "terraform-module-template" {
-  source = "git@github.com:mineiros-io/terraform-module-template.git?ref=v0.0.1"
+module "terraform-aws-iam-group" {
+  source = "git@github.com:mineiros-io/terraform-aws-iam-group.git?ref=v0.0.1"
 
   ...
 
@@ -171,16 +171,16 @@ Copyright &copy; 2020 [Mineiros GmbH][homepage]
 
 <!-- References -->
 
-[homepage]: https://mineiros.io/?ref=terraform-module-template
+[homepage]: https://mineiros.io/?ref=terraform-aws-iam-group
 
-[badge-build]: https://mineiros.semaphoreci.com/badges/terraform-module-template/branches/master.svg?style=shields&key=df11a416-f581-4d35-917a-fa3c2de2048e
-[badge-semver]: https://img.shields.io/github/v/tag/mineiros-io/terraform-module-template.svg?label=latest&sort=semver
+[badge-build]: https://mineiros.semaphoreci.com/badges/terraform-aws-iam-group/branches/master.svg?style=shields&key=547999de-c52c-4cde-846b-e74796818a6a
+[badge-semver]: https://img.shields.io/github/v/tag/mineiros-io/terraform-aws-iam-group.svg?label=latest&sort=semver
 [badge-license]: https://img.shields.io/badge/license-Apache%202.0-brightgreen.svg
 [badge-terraform]: https://img.shields.io/badge/terraform-0.13%20and%200.12.20+-623CE4.svg?logo=terraform
 [badge-slack]: https://img.shields.io/badge/slack-@mineiros--community-f32752.svg?logo=slack
 
-[build-status]: https://mineiros.semaphoreci.com/projects/terraform-module-template
-[releases-github]: https://github.com/mineiros-io/terraform-module-template/releases
+[build-status]: https://mineiros.semaphoreci.com/projects/terraform-aws-iam-group
+[releases-github]: https://github.com/mineiros-io/terraform-aws-iam-group/releases
 [releases-terraform]: https://github.com/hashicorp/terraform/releases
 [apache20]: https://opensource.org/licenses/Apache-2.0
 [slack]: https://join.slack.com/t/mineiros-community/shared_invite/zt-ehidestg-aLGoIENLVs6tvwJ11w9WGg
@@ -189,11 +189,11 @@ Copyright &copy; 2020 [Mineiros GmbH][homepage]
 [AWS]: https://aws.amazon.com/
 [Semantic Versioning (SemVer)]: https://semver.org/
 
-[examples/example/main.tf]: https://github.com/mineiros-io/terraform-module-template/blob/master/examples/example/main.tf
-[variables.tf]: https://github.com/mineiros-io/terraform-module-template/blob/master/variables.tf
-[examples/]: https://github.com/mineiros-io/terraform-module-template/blob/master/examples
-[Issues]: https://github.com/mineiros-io/terraform-module-template/issues
-[LICENSE]: https://github.com/mineiros-io/terraform-module-template/blob/master/LICENSE
-[Makefile]: https://github.com/mineiros-io/terraform-module-template/blob/master/Makefile
-[Pull Requests]: https://github.com/mineiros-io/terraform-module-template/pulls
-[Contribution Guidelines]: https://github.com/mineiros-io/terraform-module-template/blob/master/CONTRIBUTING.md
+[examples/example/main.tf]: https://github.com/mineiros-io/terraform-aws-iam-group/blob/master/examples/example/main.tf
+[variables.tf]: https://github.com/mineiros-io/terraform-aws-iam-group/blob/master/variables.tf
+[examples/]: https://github.com/mineiros-io/terraform-aws-iam-group/blob/master/examples
+[Issues]: https://github.com/mineiros-io/terraform-aws-iam-group/issues
+[LICENSE]: https://github.com/mineiros-io/terraform-aws-iam-group/blob/master/LICENSE
+[Makefile]: https://github.com/mineiros-io/terraform-aws-iam-group/blob/master/Makefile
+[Pull Requests]: https://github.com/mineiros-io/terraform-aws-iam-group/pulls
+[Contribution Guidelines]: https://github.com/mineiros-io/terraform-aws-iam-group/blob/master/CONTRIBUTING.md

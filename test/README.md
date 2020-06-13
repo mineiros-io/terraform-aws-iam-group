@@ -52,7 +52,7 @@ Alternatively, you can also run the tests without Docker.
 
 <!-- References -->
 
-[homepage]: https://mineiros.io/?ref=terraform-module-template
+[homepage]: https://mineiros.io/?ref=terraform-aws-iam-group
 [Terratest]: https://github.com/gruntwork-io/terratest
 [package testing]: https://golang.org/pkg/testing/
 [Docker]: (https://docs.docker.com/get-started/

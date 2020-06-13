@@ -1,9 +1,9 @@
 # ------------------------------------------------------------------------------
-# Example full usage of the terraform-module-template module
+# Example full usage of the terraform-aws-iam-group module
 # ------------------------------------------------------------------------------
 
-module "terraform-module-template" {
-  source = "git@github.com:mineiros-io/terraform-module-template.git?ref=v0.0.1"
+module "terraform-aws-iam-group" {
+  source = "git@github.com:mineiros-io/terraform-aws-iam-group.git?ref=v0.0.1"
 
   # All required module arguments
 

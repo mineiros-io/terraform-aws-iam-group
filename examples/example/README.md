@@ -16,8 +16,8 @@ The code in [main.tf] defines...
 
 ### Cloning the repository
 ```
-git clone https://github.com/mineiros-io/terraform-module-template.git
-cd terraform-module-template/examples/example
+git clone https://github.com/mineiros-io/terraform-aws-iam-group.git
+cd terraform-aws-iam-group/examples/example
 ```
 
 ### Initializing Terraform
@@ -37,9 +37,9 @@ Run `terraform destroy -refresh=false -auto-approve` to destroy all resources ag
 
 <!-- References -->
 
-[main.tf]: https://github.com/mineiros-io/terraform-module-template/blob/master/examples/example/main.tf
+[main.tf]: https://github.com/mineiros-io/terraform-aws-iam-group/blob/master/examples/example/main.tf
 
-[homepage]: https://mineiros.io/?ref=terraform-module-template
+[homepage]: https://mineiros.io/?ref=terraform-aws-iam-group
 
 [badge-license]: https://img.shields.io/badge/license-Apache%202.0-brightgreen.svg
 [badge-terraform]: https://img.shields.io/badge/terraform-0.13%20and%200.12.20+-623CE4.svg?logo=terraform
