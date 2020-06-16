@@ -31,7 +31,7 @@ variable "path" {
 
 variable "policy_statements" {
   type        = any
-  description = "(Optional) List of IAM policy statements to attach to the User as an inline policy."
+  description = "(Optional) List of IAM policy statements to attach to the group as an inline policy."
   default     = []
 }
 
@@ -51,7 +51,7 @@ variable "policy_name_prefix" {
 
 variable "policy_arns" {
   type        = list(string)
-  description = "(Optional) List of IAM custom or managed policies ARNs to attach to the User."
+  description = "(Optional) List of IAM custom or managed policy ARNs to attach to the group."
   default     = []
 }
 

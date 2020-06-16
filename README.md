@@ -97,6 +97,7 @@ See [variables.tf] and [examples/] for details and use-cases.
 - **`name`**: **(Required `string`)**
 
   The group's name. The name must consist of upper and lower case alphanumeric characters with no spaces. You can also include any of the following characters: `=,.@-_.`. Group names are unique irrespective of capitalization. For example, you cannot create two groups named "ADMINS" and "admins".
+
 - **`path`**: *(Optional `string`)*
 
   Path in which to create the group.
@@ -108,7 +109,7 @@ See [variables.tf] and [examples/] for details and use-cases.
 
 - **`policy_arns`**: *(Optional `list(string)`)*
 
-  List of IAM custom or managed policies ARNs to attach to the group.
+  List of IAM custom or managed policy ARNs to attach to the group.
 
 ##### Inline Policiy
 
@@ -131,17 +132,17 @@ See [variables.tf] and [examples/] for details and use-cases.
 
       effect = "Allow"
 
-      actions     = [ "s3:*" ]
+      actions     = ["s3:*"]
       not_actions = []
 
-      resources     = [ "*" ]
+      resources     = ["*"]
       not_resources = []
 
       conditions = [
         {
           test     = "Bool"
           variable = "aws:MultiFactorAuthPresent"
-          values   = [ "true" ]
+          values   = ["true"]
         }
       ]
     }

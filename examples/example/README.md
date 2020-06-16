@@ -5,7 +5,8 @@
 [![Join Slack][badge-slack]][slack]
 
 ## Basic usage
-The code in [main.tf] creates an IAM group called users.
+The code in [main.tf] creates an IAM group called `users`.
+
 ```hcl
 module "terraform-aws-iam-group" {
   source = "git@github.com:mineiros-io/terraform-aws-iam-group.git?ref=v0.0.1"
@@ -39,7 +40,7 @@ Run `terraform init` to initialize the example.
 Run `terraform plan` to see a plan of the changes.
 
 ### Applying the example
-Run `terraform apply` to create the resources. You will see a plan of the changes and terraform will prompt you for approval to actually apply the changes.
+Run `terraform apply` to create the resources. You will see a plan of the changes and Terraform will prompt you for approval to actually apply the changes.
 
 ### Destroying the example
 Run `terraform destroy` to destroy all resources again.
