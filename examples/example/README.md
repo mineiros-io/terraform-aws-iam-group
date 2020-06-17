@@ -4,40 +4,52 @@
 [![Terraform Version][badge-terraform]][releases-terraform]
 [![Join Slack][badge-slack]][slack]
 
-# What this example shows
-This example shows how to ...
-
 ## Basic usage
-The code in [main.tf] defines...
-```
+The code in [main.tf] creates an IAM group called `users`.
+
+```hcl
+module "terraform-aws-iam-group" {
+  source = "git@github.com:mineiros-io/terraform-aws-iam-group.git?ref=v0.0.1"
+
+  name = "users"
+  path = "/"
+
+  policy_statements  = []
+  policy_name        = null
+  policy_name_prefix = null
+
+  policy_arns = []
+
+  module_enabled    = true
+  module_depends_on = []
+}
 ```
 
 ## Running the example
 
 ### Cloning the repository
-```
+```bash
 git clone https://github.com/mineiros-io/terraform-aws-iam-group.git
 cd terraform-aws-iam-group/examples/example
 ```
 
 ### Initializing Terraform
-Run `terraform init` to initialize the example. The output should look like:
-```
-```
+Run `terraform init` to initialize the example.
+
+### Planning the example
+Run `terraform plan` to see a plan of the changes.
 
 ### Applying the example
-Run `terraform apply -auto-approve` to create the resources.
-```
-```
+Run `terraform apply` to create the resources. You will see a plan of the changes and Terraform will prompt you for approval to actually apply the changes.
 
 ### Destroying the example
-Run `terraform destroy -refresh=false -auto-approve` to destroy all resources again.
-```
-```
+Run `terraform destroy` to destroy all resources again.
 
 <!-- References -->
 
+<!-- markdown-link-check-disable -->
 [main.tf]: https://github.com/mineiros-io/terraform-aws-iam-group/blob/master/examples/example/main.tf
+<!-- markdown-link-check-enable -->
 
 [homepage]: https://mineiros.io/?ref=terraform-aws-iam-group
 

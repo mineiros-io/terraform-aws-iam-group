@@ -6,11 +6,13 @@
 [![Join Slack][badge-slack]][slack]
 
 # Examples for using this Mineiros Module
-- [example/] Create a Resource.
+- [example/] Create an IAM group.
 
 <!-- References -->
 
+<!-- markdown-link-check-disable -->
 [example/]: https://github.com/mineiros-io/terraform-aws-iam-group/blob/master/examples/example
+<!-- markdown-link-check-enable -->
 
 [homepage]: https://mineiros.io/?ref=terraform-aws-iam-group
 
@@ -19,7 +21,9 @@
 [badge-slack]: https://img.shields.io/badge/slack-@mineiros--community-f32752.svg?logo=slack
 [badge-semver]: https://img.shields.io/github/v/tag/mineiros-io/terraform-aws-iam-group.svg?label=latest&sort=semver
 
+<!-- markdown-link-check-disable -->
 [releases-github]: https://github.com/mineiros-io/terraform-aws-iam-group/releases
 [releases-terraform]: https://github.com/hashicorp/terraform/releases
+<!-- markdown-link-check-enable -->
 [apache20]: https://opensource.org/licenses/Apache-2.0
 [slack]: https://join.slack.com/t/mineiros-community/shared_invite/zt-ehidestg-aLGoIENLVs6tvwJ11w9WGg
