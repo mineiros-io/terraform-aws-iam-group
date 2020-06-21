@@ -6,19 +6,9 @@
 # OUTPUT ALL RESOURCES AS FULL OBJECTS
 # ------------------------------------------------------------------------------
 
-output "group" {
-  description = "The aws_iam_group object."
-  value       = try(aws_iam_group.group[0], null)
-}
-
-output "policy" {
-  description = "The aws_iam_group_policy object."
-  value       = try(aws_iam_group_policy.policy, null)
-}
-
-output "policy_attachments" {
-  description = "The aws_iam_group_policy_attachment object(s)."
-  value       = try(aws_iam_group_policy_attachment.policy_attachment, null)
+output "all" {
+  description = "All outputs exposed by the module."
+  value       = module.iam-group
 }
 
 # ------------------------------------------------------------------------------
@@ -28,7 +18,3 @@ output "policy_attachments" {
 # ------------------------------------------------------------------------------
 # OUTPUT MODULE CONFIGURATION
 # ------------------------------------------------------------------------------
-output "module_enabled" {
-  description = "Whether the module is enabled"
-  value       = var.module_enabled
-}

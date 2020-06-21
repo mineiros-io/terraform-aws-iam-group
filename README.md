@@ -94,6 +94,7 @@ See [variables.tf] and [examples/] for details and use-cases.
      A list of dependencies. Any object can be _assigned_ to this list to define a hidden external dependency.
 
 #### Main Resource Configuration
+
 - **`name`**: **(Required `string`)**
 
   The group's name. The name must consist of upper and lower case alphanumeric characters with no spaces. You can also include any of the following characters: `=,.@-_.`. Group names are unique irrespective of capitalization. For example, you cannot create two groups named "ADMINS" and "admins".
@@ -155,7 +156,7 @@ The following attributes are exported by the module:
 
 - **`group`**: The `aws_iam_group` object.
 - **`policy`**: The `aws_iam_group_policy` object.
-- **`policy_attachment`**: The `aws_iam_group_policy_attachment` object.
+- **`policy_attachments`**: The `aws_iam_group_policy_attachment` object(s).
 
 ## External Documentation
 
