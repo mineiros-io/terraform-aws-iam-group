@@ -7,12 +7,22 @@ provider "aws" {
   region  = var.aws_region
 }
 
-module "iam-group" {
+variable "aws_region" {
+  description = "The AWS region to deploy the example in."
+  type        = string
+}
+
+module "test" {
   source = "../.."
 
   name = "test-group"
-  path = "/"
+  path = "/test/"
   policy_arns = [
     "arn:aws:iam::aws:policy/ReadOnlyAccess",
   ]
+}
+
+output "test" {
+  description = "All outputs exposed by the module."
+  value       = module.test
 }
