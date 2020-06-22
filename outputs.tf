@@ -13,11 +13,11 @@ output "group" {
 
 output "policy" {
   description = "The aws_iam_group_policy object."
-  value       = try(aws_iam_group_policy.policy, null)
+  value       = try(aws_iam_group_policy.policy[0], null)
 }
 
 output "policy_attachments" {
-  description = "The aws_iam_group_policy_attachment object(s)."
+  description = "A list of aws_iam_group_policy_attachment objects."
   value       = try(aws_iam_group_policy_attachment.policy_attachment, null)
 }
 

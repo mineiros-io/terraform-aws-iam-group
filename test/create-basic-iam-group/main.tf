@@ -10,8 +10,8 @@ provider "aws" {
 module "iam-group" {
   source = "../.."
 
-  name        = "test-group"
-  path        = "/"
+  name = "test-group"
+  path = "/"
   policy_arns = [
     "arn:aws:iam::aws:policy/ReadOnlyAccess",
   ]

@@ -156,7 +156,7 @@ The following attributes are exported by the module:
 
 - **`group`**: The `aws_iam_group` object.
 - **`policy`**: The `aws_iam_group_policy` object.
-- **`policy_attachments`**: The `aws_iam_group_policy_attachment` object(s).
+- **`policy_attachments`**: A list of aws_iam_group_policy_attachment objects.
 
 ## External Documentation
 
