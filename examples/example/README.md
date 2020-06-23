@@ -5,6 +5,7 @@
 [![Join Slack][badge-slack]][slack]
 
 ## Basic usage
+
 The code in [main.tf] creates an IAM group called `users`.
 
 ```hcl
@@ -28,21 +29,26 @@ module "terraform-aws-iam-group" {
 ## Running the example
 
 ### Cloning the repository
+
 ```bash
 git clone https://github.com/mineiros-io/terraform-aws-iam-group.git
 cd terraform-aws-iam-group/examples/example
 ```
 
 ### Initializing Terraform
+
 Run `terraform init` to initialize the example.
 
 ### Planning the example
+
 Run `terraform plan` to see a plan of the changes.
 
 ### Applying the example
+
 Run `terraform apply` to create the resources. You will see a plan of the changes and Terraform will prompt you for approval to actually apply the changes.
 
 ### Destroying the example
+
 Run `terraform destroy` to destroy all resources again.
 
 <!-- References -->

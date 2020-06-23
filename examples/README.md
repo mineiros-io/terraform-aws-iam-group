@@ -6,6 +6,7 @@
 [![Join Slack][badge-slack]][slack]
 
 # Examples for using this Mineiros Module
+
 - [example/] Create an IAM group.
 
 <!-- References -->
