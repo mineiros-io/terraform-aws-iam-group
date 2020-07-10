@@ -223,16 +223,14 @@ Copyright &copy; 2020 [Mineiros GmbH][homepage]
 [homepage]: https://mineiros.io/?ref=terraform-aws-iam-group
 [hello@mineiros.io]: mailto:hello@mineiros.io
 
-[badge-build]: https://mineiros.semaphoreci.com/badges/terraform-aws-iam-group/branches/master.svg?style=shields&key=547999de-c52c-4cde-846b-e74796818a6a
+[badge-build]: https://github.com/mineiros-io/terraform-aws-iam-group/workflows/CI/CD%20Pipeline/badge.svg
 [badge-semver]: https://img.shields.io/github/v/tag/mineiros-io/terraform-aws-iam-group.svg?label=latest&sort=semver
 [badge-license]: https://img.shields.io/badge/license-Apache%202.0-brightgreen.svg
 [badge-terraform]: https://img.shields.io/badge/terraform-0.13%20and%200.12.20+-623CE4.svg?logo=terraform
 [badge-slack]: https://img.shields.io/badge/slack-@mineiros--community-f32752.svg?logo=slack
 
-<!-- markdown-link-check-disable -->
-[build-status]: https://mineiros.semaphoreci.com/projects/terraform-aws-iam-group
+[build-status]: https://github.com/mineiros-io/terraform-aws-iam-group/actions
 [releases-github]: https://github.com/mineiros-io/terraform-aws-iam-group/releases
-<!-- markdown-link-check-enable -->
 [releases-terraform]: https://github.com/hashicorp/terraform/releases
 [apache20]: https://opensource.org/licenses/Apache-2.0
 [slack]: https://join.slack.com/t/mineiros-community/shared_invite/zt-ehidestg-aLGoIENLVs6tvwJ11w9WGg
@@ -243,7 +241,6 @@ Copyright &copy; 2020 [Mineiros GmbH][homepage]
 [AWS]: https://aws.amazon.com/
 [Semantic Versioning (SemVer)]: https://semver.org/
 
-<!-- markdown-link-check-disable -->
 [examples/example/main.tf]: https://github.com/mineiros-io/terraform-aws-iam-group/blob/master/examples/example/main.tf
 [variables.tf]: https://github.com/mineiros-io/terraform-aws-iam-group/blob/master/variables.tf
 [examples/]: https://github.com/mineiros-io/terraform-aws-iam-group/blob/master/examples
@@ -252,4 +249,3 @@ Copyright &copy; 2020 [Mineiros GmbH][homepage]
 [Makefile]: https://github.com/mineiros-io/terraform-aws-iam-group/blob/master/Makefile
 [Pull Requests]: https://github.com/mineiros-io/terraform-aws-iam-group/pulls
 [Contribution Guidelines]: https://github.com/mineiros-io/terraform-aws-iam-group/blob/master/CONTRIBUTING.md
-<!-- markdown-link-check-enable -->
