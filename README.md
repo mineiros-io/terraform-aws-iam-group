@@ -8,7 +8,10 @@
 
 # terraform-aws-iam-group
 
-A [Terraform] 0.12 base module for creating and managing [IAM Groups] on [Amazon Web Services (AWS)][AWS].
+A [Terraform] base module for creating and managing [IAM Groups] on [Amazon Web Services (AWS)][AWS].
+
+***This module supports Terraform v0.13 as well as v0.12.20 and above
+and is compatible with the terraform AWS provider v3 as well as v2.0 and above.***
 
 - [Module Features](#module-features)
 - [Getting Started](#getting-started)
