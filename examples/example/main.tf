@@ -5,7 +5,7 @@
 
 module "terraform-aws-iam-group" {
   source  = "mineiros-io/iam-group/aws"
-  version = "~> 0.1.0"
+  version = "~> 0.2.0"
 
   # All required module arguments
 
@@ -36,8 +36,7 @@ module "terraform-aws-iam-group" {
 # Provider Setup
 # ------------------------------------------------------------------------------
 provider "aws" {
-  version = "~> 2.0"
-  region  = "eu-west-1"
+  region = "eu-west-1"
 }
 
 # ------------------------------------------------------------------------------

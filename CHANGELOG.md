@@ -6,6 +6,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.2.0]
+### Added
+- Add support for Terraform v0.13.x
+- Add support for Terraform AWS Provider v3.x
+- Prepare support for Terraform v0.14.x
+
 ## [0.1.0]
 ### Added
 - Implement support for `aws_iam_group` resource
@@ -16,6 +22,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add unit tests for basic use cases
 
 <!-- markdown-link-check-disable -->
-[Unreleased]: https://github.com/mineiros-io/terraform-aws-iam-group/compare/v0.1.0...HEAD
-[0.1.0]: https://github.com/mineiros-io/terraform-aws-iam-group/releases/tag/v0.1.0
+[Unreleased]: https://github.com/mineiros-io/terraform-aws-iam-group/compare/v0.2.0...HEAD
+[0.2.0]: https://github.com/mineiros-io/terraform-aws-iam-group/compare/v0.1.0...v0.2.0
 <!-- markdown-link-check-disabled -->
+[0.1.0]: https://github.com/mineiros-io/terraform-aws-iam-group/releases/tag/v0.1.0
