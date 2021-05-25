@@ -8,10 +8,10 @@
 
 # terraform-aws-iam-group
 
-A [Terraform] base module for creating and managing [IAM Groups] on [Amazon Web Services (AWS)][AWS].
+A [Terraform] base module for creating and managing [IAM Groups] on [Amazon Web Services (AWS)][aws].
 
-***This module supports Terraform v0.13 as well as v0.12.20 and above
-and is compatible with the terraform AWS provider v3 as well as v2.0 and above.***
+**_This module supports Terraform v0.15, v0.14, v0.13, as well as v0.12.20 and above
+and is compatible with the terraform AWS provider v3 as well as v2.0 and above._**
 
 - [Module Features](#module-features)
 - [Getting Started](#getting-started)
@@ -43,7 +43,7 @@ This is a list of features implemented in this module:
   Add an inline policy to the group,
   attach custom or managed policies.
 
-- *Features not yet implemented*:
+- _Features not yet implemented_:
   [`iam_group_membership`](https://www.terraform.io/docs/providers/aws/r/iam_group_membership.html)
 
 ## Getting Started
@@ -53,7 +53,7 @@ Most basic usage just setting required arguments:
 ```hcl
 module "terraform-aws-iam-group" {
   source  = "mineiros-io/iam-group/aws"
-  version = "~> 0.2.0"
+  version = "~> 0.4.0"
 
   name = "developers"
 }
@@ -64,7 +64,7 @@ Advanced usage as found in [examples/example/main.tf] setting all required and o
 ```hcl
 module "terraform-aws-iam-group" {
   source  = "mineiros-io/iam-group/aws"
-  version = "~> 0.2.0"
+  version = "~> 0.4.0"
 
   name = "team"
 
@@ -89,14 +89,14 @@ See [variables.tf] and [examples/] for details and use-cases.
 
 #### Module Configuration
 
-- **`module_enabled`**: *(Optional `bool`)*
+- **`module_enabled`**: _(Optional `bool`)_
 
-     Specifies whether resources in the module will be created.
-     Default is `true`.
+  Specifies whether resources in the module will be created.
+  Default is `true`.
 
-- **`module_depends_on`**: *(Optional `list(any)`)*
+- **`module_depends_on`**: _(Optional `list(any)`)_
 
-     A list of dependencies. Any object can be _assigned_ to this list to define a hidden external dependency.
+  A list of dependencies. Any object can be _assigned_ to this list to define a hidden external dependency.
 
 #### Main Resource Configuration
 
@@ -104,7 +104,7 @@ See [variables.tf] and [examples/] for details and use-cases.
 
   The group's name. The name must consist of upper and lower case alphanumeric characters with no spaces. You can also include any of the following characters: `=,.@-_.`. Group names are unique irrespective of capitalization. For example, you cannot create two groups named "ADMINS" and "admins".
 
-- **`path`**: *(Optional `string`)*
+- **`path`**: _(Optional `string`)_
 
   Path in which to create the group.
   Default is `"/"`
@@ -113,21 +113,21 @@ See [variables.tf] and [examples/] for details and use-cases.
 
 ##### Custom & Managed Policies
 
-- **`policy_arns`**: *(Optional `list(string)`)*
+- **`policy_arns`**: _(Optional `list(string)`)_
 
   List of IAM custom or managed policy ARNs to attach to the group.
 
 ##### Inline Policiy
 
-- **`policy_name`**: *(Optional `string`)*
+- **`policy_name`**: _(Optional `string`)_
 
   The name of the group policy. If omitted, Terraform will assign a random, unique name.
 
-- **`policy_name_prefix`**: *(Optional `string`)*
+- **`policy_name_prefix`**: _(Optional `string`)_
 
   Creates a unique name beginning with the specified prefix. Conflicts with name.
 
-- **`policy_statements`**: *(Optional `list(statement)`)*
+- **`policy_statements`**: _(Optional `list(statement)`)_
 
   List of IAM policy statements to attach to the role as an inline policy.
 
@@ -166,6 +166,7 @@ The following attributes are exported by the module:
 ## External Documentation
 
 - AWS Documentation IAM:
+
   - https://docs.aws.amazon.com/IAM/latest/UserGuide/id_groups.html
   - https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies.html
 
@@ -227,33 +228,27 @@ Copyright &copy; 2020 [Mineiros GmbH][homepage]
 
 [homepage]: https://mineiros.io/?ref=terraform-aws-iam-group
 [hello@mineiros.io]: mailto:hello@mineiros.io
-
-[badge-build]: https://github.com/mineiros-io/terraform-aws-iam-group/workflows/CI/CD%20Pipeline/badge.svg
+[badge-build]: https://github.com/mineiros-io/terraform-aws-iam-group/workflows/Tests/badge.svg
 [badge-semver]: https://img.shields.io/github/v/tag/mineiros-io/terraform-aws-iam-group.svg?label=latest&sort=semver
 [badge-license]: https://img.shields.io/badge/license-Apache%202.0-brightgreen.svg
-[badge-terraform]: https://img.shields.io/badge/terraform-0.13%20and%200.12.20+-623CE4.svg?logo=terraform
+[badge-terraform]: https://img.shields.io/badge/terraform-0.15%20|%200.14%20|%200.13%20|%200.12.20+-623CE4.svg?logo=terraform
 [badge-slack]: https://img.shields.io/badge/slack-@mineiros--community-f32752.svg?logo=slack
-
 [build-status]: https://github.com/mineiros-io/terraform-aws-iam-group/actions
 [badge-tf-aws]: https://img.shields.io/badge/AWS-3%20and%202.0+-F8991D.svg?logo=terraform
 [releases-aws-provider]: https://github.com/terraform-providers/terraform-provider-aws/releases
-
 [releases-github]: https://github.com/mineiros-io/terraform-aws-iam-group/releases
 [releases-terraform]: https://github.com/hashicorp/terraform/releases
 [apache20]: https://opensource.org/licenses/Apache-2.0
 [slack]: https://join.slack.com/t/mineiros-community/shared_invite/zt-ehidestg-aLGoIENLVs6tvwJ11w9WGg
-
-[IAM Groups]: https://docs.aws.amazon.com/IAM/latest/UserGuide/id_groups.html
-
-[Terraform]: https://www.terraform.io
-[AWS]: https://aws.amazon.com/
-[Semantic Versioning (SemVer)]: https://semver.org/
-
+[iam groups]: https://docs.aws.amazon.com/IAM/latest/UserGuide/id_groups.html
+[terraform]: https://www.terraform.io
+[aws]: https://aws.amazon.com/
+[semantic versioning (semver)]: https://semver.org/
 [examples/example/main.tf]: https://github.com/mineiros-io/terraform-aws-iam-group/blob/master/examples/example/main.tf
 [variables.tf]: https://github.com/mineiros-io/terraform-aws-iam-group/blob/master/variables.tf
 [examples/]: https://github.com/mineiros-io/terraform-aws-iam-group/blob/master/examples
-[Issues]: https://github.com/mineiros-io/terraform-aws-iam-group/issues
-[LICENSE]: https://github.com/mineiros-io/terraform-aws-iam-group/blob/master/LICENSE
-[Makefile]: https://github.com/mineiros-io/terraform-aws-iam-group/blob/master/Makefile
-[Pull Requests]: https://github.com/mineiros-io/terraform-aws-iam-group/pulls
-[Contribution Guidelines]: https://github.com/mineiros-io/terraform-aws-iam-group/blob/master/CONTRIBUTING.md
+[issues]: https://github.com/mineiros-io/terraform-aws-iam-group/issues
+[license]: https://github.com/mineiros-io/terraform-aws-iam-group/blob/master/LICENSE
+[makefile]: https://github.com/mineiros-io/terraform-aws-iam-group/blob/master/Makefile
+[pull requests]: https://github.com/mineiros-io/terraform-aws-iam-group/pulls
+[contribution guidelines]: https://github.com/mineiros-io/terraform-aws-iam-group/blob/master/CONTRIBUTING.md
