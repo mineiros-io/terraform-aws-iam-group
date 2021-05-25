@@ -53,7 +53,7 @@ Most basic usage just setting required arguments:
 ```hcl
 module "terraform-aws-iam-group" {
   source  = "mineiros-io/iam-group/aws"
-  version = "~> 0.2.0"
+  version = "~> 0.4.0"
 
   name = "developers"
 }
@@ -64,7 +64,7 @@ Advanced usage as found in [examples/example/main.tf] setting all required and o
 ```hcl
 module "terraform-aws-iam-group" {
   source  = "mineiros-io/iam-group/aws"
-  version = "~> 0.2.0"
+  version = "~> 0.4.0"
 
   name = "team"
 
@@ -228,7 +228,7 @@ Copyright &copy; 2020 [Mineiros GmbH][homepage]
 
 [homepage]: https://mineiros.io/?ref=terraform-aws-iam-group
 [hello@mineiros.io]: mailto:hello@mineiros.io
-[badge-build]: https://github.com/mineiros-io/terraform-aws-iam-group/workflows/CI/CD%20Pipeline/badge.svg
+[badge-build]: https://github.com/mineiros-io/terraform-aws-iam-group/workflows/Tests/badge.svg
 [badge-semver]: https://img.shields.io/github/v/tag/mineiros-io/terraform-aws-iam-group.svg?label=latest&sort=semver
 [badge-license]: https://img.shields.io/badge/license-Apache%202.0-brightgreen.svg
 [badge-terraform]: https://img.shields.io/badge/terraform-0.15%20|%200.14%20|%200.13%20|%200.12.20+-623CE4.svg?logo=terraform

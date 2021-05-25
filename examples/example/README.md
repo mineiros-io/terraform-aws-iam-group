@@ -11,7 +11,7 @@ The code in [main.tf] creates an IAM group called `users`.
 ```hcl
 module "terraform-aws-iam-group" {
   source  = "mineiros-io/iam-group/aws"
-  version = "~> 0.2.0"
+  version = "~> 0.4.0"
 
   name = "users"
   path = "/"
@@ -55,15 +55,15 @@ Run `terraform destroy` to destroy all resources again.
 <!-- References -->
 
 <!-- markdown-link-check-disable -->
+
 [main.tf]: https://github.com/mineiros-io/terraform-aws-iam-group/blob/master/examples/example/main.tf
+
 <!-- markdown-link-check-enable -->
 
 [homepage]: https://mineiros.io/?ref=terraform-aws-iam-group
-
 [badge-license]: https://img.shields.io/badge/license-Apache%202.0-brightgreen.svg
 [badge-terraform]: https://img.shields.io/badge/terraform-0.13%20and%200.12.20+-623CE4.svg?logo=terraform
 [badge-slack]: https://img.shields.io/badge/slack-@mineiros--community-f32752.svg?logo=slack
-
 [releases-terraform]: https://github.com/hashicorp/terraform/releases
 [apache20]: https://opensource.org/licenses/Apache-2.0
 [slack]: https://join.slack.com/t/mineiros-community/shared_invite/zt-ehidestg-aLGoIENLVs6tvwJ11w9WGg
