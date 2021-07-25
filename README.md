@@ -53,7 +53,7 @@ Most basic usage just setting required arguments:
 ```hcl
 module "terraform-aws-iam-group" {
   source  = "mineiros-io/iam-group/aws"
-  version = "~> 0.4.0"
+  version = "~> 0.5.0"
 
   name = "developers"
 }
@@ -64,7 +64,7 @@ Advanced usage as found in [examples/example/main.tf] setting all required and o
 ```hcl
 module "terraform-aws-iam-group" {
   source  = "mineiros-io/iam-group/aws"
-  version = "~> 0.4.0"
+  version = "~> 0.5.0"
 
   name = "team"
 

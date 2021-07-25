@@ -11,7 +11,7 @@ The code in [main.tf] creates an IAM group called `users`.
 ```hcl
 module "terraform-aws-iam-group" {
   source  = "mineiros-io/iam-group/aws"
-  version = "~> 0.4.0"
+  version = "~> 0.5.0"
 
   name = "users"
   path = "/"
