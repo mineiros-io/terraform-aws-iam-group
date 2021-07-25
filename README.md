@@ -10,7 +10,7 @@
 
 A [Terraform] base module for creating and managing [IAM Groups] on [Amazon Web Services (AWS)][aws].
 
-**_This module supports Terraform v0.15, v0.14, v0.13, as well as v0.12.20 and above
+**_This module supports Terraform v1.x, v0.15, v0.14, v0.13, as well as v0.12.20 and above
 and is compatible with the terraform AWS provider v3 as well as v2.0 and above._**
 
 - [Module Features](#module-features)
@@ -53,7 +53,7 @@ Most basic usage just setting required arguments:
 ```hcl
 module "terraform-aws-iam-group" {
   source  = "mineiros-io/iam-group/aws"
-  version = "~> 0.4.0"
+  version = "~> 0.5.0"
 
   name = "developers"
 }
@@ -64,7 +64,7 @@ Advanced usage as found in [examples/example/main.tf] setting all required and o
 ```hcl
 module "terraform-aws-iam-group" {
   source  = "mineiros-io/iam-group/aws"
-  version = "~> 0.4.0"
+  version = "~> 0.5.0"
 
   name = "team"
 
@@ -231,7 +231,7 @@ Copyright &copy; 2020 [Mineiros GmbH][homepage]
 [badge-build]: https://github.com/mineiros-io/terraform-aws-iam-group/workflows/Tests/badge.svg
 [badge-semver]: https://img.shields.io/github/v/tag/mineiros-io/terraform-aws-iam-group.svg?label=latest&sort=semver
 [badge-license]: https://img.shields.io/badge/license-Apache%202.0-brightgreen.svg
-[badge-terraform]: https://img.shields.io/badge/terraform-0.15%20|%200.14%20|%200.13%20|%200.12.20+-623CE4.svg?logo=terraform
+[badge-terraform]: https://img.shields.io/badge/terraform-1.x%20|%200.15%20|%200.14%20|%200.13%20|%200.12.20+-623CE4.svg?logo=terraform
 [badge-slack]: https://img.shields.io/badge/slack-@mineiros--community-f32752.svg?logo=slack
 [build-status]: https://github.com/mineiros-io/terraform-aws-iam-group/actions
 [badge-tf-aws]: https://img.shields.io/badge/AWS-3%20and%202.0+-F8991D.svg?logo=terraform
