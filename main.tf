@@ -76,3 +76,14 @@ resource "aws_iam_group_policy_attachment" "policy_attachment" {
 
   depends_on = [var.module_depends_on]
 }
+
+# Add list of users to the group
+resource "aws_iam_group_membership" "users" {
+  count = var.module_enabled && var.users != null ? 1 : 0
+
+  name  = aws_iam_group.group[0].name
+  group = aws_iam_group.group[0].name
+  users = var.users
+
+  depends_on = [var.module_depends_on]
+}
