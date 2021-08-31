@@ -41,10 +41,9 @@ This is a list of features implemented in this module:
 
 - **Extended Module Features**:
   Add an inline policy to the group,
-  attach custom or managed policies.
+  attach custom or managed policies,
+  add a list of users to the group.
 
-- _Features not yet implemented_:
-  [`iam_group_membership`](https://www.terraform.io/docs/providers/aws/r/iam_group_membership.html)
 
 ## Getting Started
 
@@ -111,6 +110,12 @@ See [variables.tf] and [examples/] for details and use-cases.
 
 #### Extended Resource Configuration
 
+##### Users of the group
+
+- **`users`**: _(Optional `set(string)`)_
+
+  List of IAM users to bind to the group.
+
 ##### Custom & Managed Policies
 
 - **`policy_arns`**: _(Optional `list(string)`)_
@@ -162,6 +167,7 @@ The following attributes are exported by the module:
 - **`group`**: The `aws_iam_group` object.
 - **`policy`**: The `aws_iam_group_policy` object.
 - **`policy_attachments`**: A list of aws_iam_group_policy_attachment objects.
+- **`users`**: The `aws_iam_group_membership` object.
 
 ## External Documentation
 

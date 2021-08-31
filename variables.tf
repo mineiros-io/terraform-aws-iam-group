@@ -55,6 +55,12 @@ variable "policy_arns" {
   default     = []
 }
 
+variable "users" {
+  type        = set(string)
+  description = "(Optional) List of IAM users to bind to the group."
+  default     = null
+}
+
 # ------------------------------------------------------------------------------
 # MODULE CONFIGURATION PARAMETERS
 # These variables are used to configure the module.

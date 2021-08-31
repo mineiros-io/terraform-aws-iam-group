@@ -21,6 +21,11 @@ output "policy_attachments" {
   value       = try(aws_iam_group_policy_attachment.policy_attachment, null)
 }
 
+output "users" {
+  description = "The aws_iam_group_membership object."
+  value       = try(aws_iam_group_membership.users[0], null)
+}
+
 # ------------------------------------------------------------------------------
 # OUTPUT ALL INPUT VARIABLES
 # ------------------------------------------------------------------------------
