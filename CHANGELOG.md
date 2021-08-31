@@ -9,9 +9,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [0.5.1]
 
+### Added
+
 - Add support adding users to the group via `aws_iam_group_membership` resource.
 
 ## [0.5.0]
+
+### Added
 
 - Add support for Terraform `v1.x`
 
