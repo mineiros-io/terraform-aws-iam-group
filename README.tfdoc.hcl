@@ -293,7 +293,7 @@ section {
 
       - **`group`**: The `aws_iam_group` object.
       - **`policy`**: The `aws_iam_group_policy` object.
-      - **`policy_attachments`**: A list of aws_iam_group_policy_attachment objects.
+      - **`policy_attachments`**: A list of `aws_iam_group_policy_attachment` objects.
       - **`users`**: The `aws_iam_group_membership` object.
     END
   }
