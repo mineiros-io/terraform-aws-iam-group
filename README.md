@@ -139,7 +139,7 @@ See [variables.tf] and [examples/] for details and use-cases.
 
   Creates a unique name beginning with the specified prefix. Conflicts with name.
 
-- [**`policy_statements`**](#var-policy_statements): *(Optional `list(policy_statements)`)*<a name="var-policy_statements"></a>
+- [**`policy_statements`**](#var-policy_statements): *(Optional `list(policy_statement)`)*<a name="var-policy_statements"></a>
 
   List of IAM policy statements to attach to the role as an inline policy.
 
@@ -149,15 +149,15 @@ See [variables.tf] and [examples/] for details and use-cases.
   policy_statements = [
     {
       sid = "FullS3Access"
-  
+
       effect = "Allow"
-  
+
       actions     = ["s3:*"]
       not_actions = []
-  
+
       resources     = ["*"]
       not_resources = []
-  
+
       conditions = [
         {
           test     = "Bool"
@@ -169,46 +169,46 @@ See [variables.tf] and [examples/] for details and use-cases.
   ]
   ```
 
-  The object accepts the following attributes:
+  Each `policy_statement` object in the list accepts the following attributes:
 
-  - [**`sid`**](#attr-sid-policy_statements): *(Optional `string`)*<a name="attr-sid-policy_statements"></a>
+  - [**`sid`**](#attr-policy_statements-sid): *(Optional `string`)*<a name="attr-policy_statements-sid"></a>
 
     An ID for the policy statement.
 
-  - [**`effect`**](#attr-effect-policy_statements): *(Optional `string`)*<a name="attr-effect-policy_statements"></a>
+  - [**`effect`**](#attr-policy_statements-effect): *(Optional `string`)*<a name="attr-policy_statements-effect"></a>
 
     Either "Allow" or "Deny", to specify whether this statement allows or denies the given actions.
 
     Default is `"Allow"`.
 
-  - [**`actions`**](#attr-actions-policy_statements): *(Optional `list(string)`)*<a name="attr-actions-policy_statements"></a>
+  - [**`actions`**](#attr-policy_statements-actions): *(Optional `list(string)`)*<a name="attr-policy_statements-actions"></a>
 
     A list of actions that this statement either allows or denies.
 
-  - [**`not_actions`**](#attr-not_actions-policy_statements): *(Optional `list(string)`)*<a name="attr-not_actions-policy_statements"></a>
+  - [**`not_actions`**](#attr-policy_statements-not_actions): *(Optional `list(string)`)*<a name="attr-policy_statements-not_actions"></a>
 
     A list of actions that this statement does not apply to.
     Used to apply a policy statement to all actions except those listed.
 
-  - [**`principals`**](#attr-principals-policy_statements): *(Optional `list(principal)`)*<a name="attr-principals-policy_statements"></a>
+  - [**`principals`**](#attr-policy_statements-principals): *(Optional `list(principal)`)*<a name="attr-policy_statements-principals"></a>
 
     A nested configuration block (described below) specifying a resource (or resource pattern) to which this statement applies.
 
-    The object accepts the following attributes:
+    Each `principal` object in the list accepts the following attributes:
 
-    - [**`type`**](#attr-type-principals-policy_statements): *(Optional `string`)*<a name="attr-type-principals-policy_statements"></a>
+    - [**`type`**](#attr-policy_statements-principals-type): *(Optional `string`)*<a name="attr-policy_statements-principals-type"></a>
 
       The type of principal. For AWS ARNs this is "AWS". For AWS services (e.g. Lambda), this is "Service".
 
       Default is `"AWS"`.
 
-    - [**`identifiers`**](#attr-identifiers-principals-policy_statements): *(**Required** `list(string)`)*<a name="attr-identifiers-principals-policy_statements"></a>
+    - [**`identifiers`**](#attr-policy_statements-principals-identifiers): *(**Required** `list(string)`)*<a name="attr-policy_statements-principals-identifiers"></a>
 
       List of identifiers for principals.
       When type is "AWS", these are IAM user or role ARNs.
       When type is "Service", these are AWS Service roles e.g. `lambda.amazonaws.com`.
 
-  - [**`not_principals`**](#attr-not_principals-policy_statements): *(Optional `list(principal)`)*<a name="attr-not_principals-policy_statements"></a>
+  - [**`not_principals`**](#attr-policy_statements-not_principals): *(Optional `list(principal)`)*<a name="attr-policy_statements-not_principals"></a>
 
     Like principals except gives resources that the statement does not apply to.
 
@@ -216,10 +216,21 @@ See [variables.tf] and [examples/] for details and use-cases.
 
 The following attributes are exported by the module:
 
-- **`group`**: The `aws_iam_group` object.
-- **`policy`**: The `aws_iam_group_policy` object.
-- **`policy_attachments`**: A list of `aws_iam_group_policy_attachment` objects.
-- **`users`**: The `aws_iam_group_membership` object.
+- [**`group`**](#output-group): *(`object(group)`)*<a name="output-group"></a>
+
+  The `aws_iam_group` object.
+
+- [**`policy`**](#output-policy): *(`object(policy)`)*<a name="output-policy"></a>
+
+  The `aws_iam_group_policy` object.
+
+- [**`policy_attachments`**](#output-policy_attachments): *(`list(policy_attachment)`)*<a name="output-policy_attachments"></a>
+
+  A list of `aws_iam_group_policy_attachment` objects.
+
+- [**`users`**](#output-users): *(`list(user)`)*<a name="output-users"></a>
+
+  A list of `aws_iam_group_membership` objects.
 
 ## External Documentation
 
