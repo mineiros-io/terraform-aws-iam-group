@@ -188,8 +188,7 @@ section {
           }
 
           variable "policy_statements" {
-            type           = any
-            readme_type    = "list(policy_statements)"
+            type           = list(policy_statement)
             readme_example = <<-END
               policy_statements = [
                 {
@@ -248,8 +247,7 @@ section {
             }
 
             attribute "principals" {
-              type        = any
-              readme_type = "list(principal)"
+              type        = list(principal)
               description = <<-END
                 A nested configuration block (described below) specifying a resource (or resource pattern) to which this statement applies.
               END
@@ -274,8 +272,7 @@ section {
             }
 
             attribute "not_principals" {
-              type        = any
-              readme_type = "list(principal)"
+              type        = list(principal)
               description = <<-END
                 Like principals except gives resources that the statement does not apply to.
               END
@@ -290,12 +287,35 @@ section {
     title   = "Module Outputs"
     content = <<-END
       The following attributes are exported by the module:
-
-      - **`group`**: The `aws_iam_group` object.
-      - **`policy`**: The `aws_iam_group_policy` object.
-      - **`policy_attachments`**: A list of `aws_iam_group_policy_attachment` objects.
-      - **`users`**: The `aws_iam_group_membership` object.
     END
+
+    output "group" {
+      type        = object(group)
+      description = <<-END
+        The `aws_iam_group` object.
+      END
+    }
+
+    output "policy" {
+      type        = object(policy)
+      description = <<-END
+        The `aws_iam_group_policy` object.
+      END
+    }
+
+    output "policy_attachments" {
+      type        = list(policy_attachment)
+      description = <<-END
+        A list of `aws_iam_group_policy_attachment` objects.
+      END
+    }
+
+    output "users" {
+      type        = list(user)
+      description = <<-END
+        A list of `aws_iam_group_membership` objects.
+      END
+    }
   }
 
   section {
