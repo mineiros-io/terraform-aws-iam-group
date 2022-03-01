@@ -65,8 +65,7 @@ section {
 
       ```hcl
       module "terraform-aws-iam-group" {
-        source  = "mineiros-io/iam-group/aws"
-        version = "~> 0.5.0"
+        source  = "git@github.com:mineiros-io/terraform-aws-iam-group.git?ref=v0.5.1"
 
         name = "developers"
       }
@@ -76,8 +75,7 @@ section {
 
       ```hcl
       module "terraform-aws-iam-group" {
-        source  = "mineiros-io/iam-group/aws"
-        version = "~> 0.5.0"
+        source  = "git@github.com:mineiros-io/terraform-aws-iam-group.git?ref=v0.5.1"
 
         name = "team"
 
