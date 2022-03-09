@@ -64,7 +64,8 @@ Advanced usage as found in [examples/example/main.tf] setting all required and o
 
 ```hcl
 module "terraform-aws-iam-group" {
-  source  = "git@github.com:mineiros-io/terraform-aws-iam-group.git?ref=v0.5.1"
+  source  = "mineiros-io/iam-group/aws"
+  version = "~> 0.5.1"
 
   name = "team"
 
